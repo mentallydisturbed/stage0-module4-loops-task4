@@ -7,15 +7,15 @@ public class TwoRangesSum {
         }else if (lastInRow < 0) {
             System.out.println("last number in row is negative");
         }else {
-            System.out.println("skipped sum is " + numberToSkip * (numberToSkip + 1) / 2);
-            int sum = lastInRow * (lastInRow + 1) / 2;
-            System.out.println("counted sum is " + (sum - numberToSkip * (numberToSkip + 1) / 2));
+            int skippedSum = 0;
+            int countedSum = 0;
+            for(int i = 1; i <= numberToSkip; i++) skippedSum += i;
+            for(int i = numberToSkip + 1; i <= lastInRow; i++) countedSum += i;
+            System.out.println("skipped sum is " + skippedSum);
+            System.out.println("counted sum is " + countedSum);
         }
-        for (;;){
-            break;
-        }
-        for (;;){
-            break;
-        }
+
     }
+
+   
 }
